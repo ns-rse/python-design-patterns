@@ -1,0 +1,108 @@
+[build-system]
+requires = ["setuptools>=65.6.3", "setuptools_scm[tools]>=6.2", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "my_package"
+authors = [
+  {name = "Neil Shephard", email="nshephard@gmail.com"},
+]
+description = "A package of example design patterns implemented in Python."
+license = {text = "MIT"}
+readme = "README.md"
+dynamic = ["version"]
+dependencies = [
+  "numpy",
+  "scikit-image",
+]
+
+[project.urls]
+Source = "https://github.com/ns-rse/python-design-patterns"
+Bug_Tracker = "https://github.com/ns-rse/python-design-patterns/issues"
+Documentation = "https://ns-rse.github.com/design-patterns"
+
+[project.optional-dependencies]
+dev = [
+  "black",
+  "flake8",
+  "Flake8-pyproject",
+  "ipython",
+  "jedi-language-server",
+  "mypy",
+  "pre-commit",
+  "pylint",
+  "pytest",
+  "pytest-cov",
+  "pytest-xdist",
+  "ruff"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["python_design_patterns", "tests"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "--cov --mpl"
+testpaths = [
+    "tests",
+]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::UserWarning",
+]
+
+[tool.black]
+line-length = 120
+target-version = ["py38", "py39", "py310", "py311"]
+exclude = '''
+
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.venv
+  )/
+)
+'''
+
+[tool.flake8]
+ignore = ['E231', 'E241']
+per-file-ignores = [
+    '__init__.py:F401',
+]
+max-line-length = 120
+count = true
+
+[tool.setuptools_scm]
+write_to = "python_design_patterns/_version.py"
+
+[tool.ruff]
+line-length = 120
+fixable = ["A", "B", "C", "D", "E", "F", "R", "S", "W", "U"]
+unfixable = []
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+]
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
