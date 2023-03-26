@@ -1,3 +1,5 @@
+[pytest](https://github.com/ns-rse/python-design-patterns/actions/workflows/tests.yml/badge.svg)](https://github.com/ns-rse/python-design-patterns/actions/workflows/tests.yml)
+
 # Python Design Patterns
 
 A simple package consisting of example design-patterns to complement the blog [Design Patterns](https://ns-rse.github.io/design-patterns).
