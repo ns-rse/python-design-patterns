@@ -43,7 +43,7 @@ include = ["python_design_patterns", "tests"]
 
 [tool.pytest.ini_options]
 minversion = "7.0"
-addopts = "--cov --mpl"
+addopts = "--cov"
 testpaths = [
     "tests",
 ]
