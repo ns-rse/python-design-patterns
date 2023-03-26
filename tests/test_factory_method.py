@@ -22,3 +22,13 @@ pytest.random_array = rng.random((10, 10))
 def test_threshold(data: np.ndarray, method: str, expected_threshold: float) -> None:
     """Test the threshold factory method."""
     assert threshold(data, method) == expected_threshold
+
+
+@pytest.mark.parametrize(
+    "data,invalid_method",
+    [(pytest.random_array, "left"), (pytest.random_array, "right"), (pytest.random_array, "median")],
+)
+def test_threshold_value_error(data: np.ndarray, invalid_method: str) -> None:
+    """Test ValueError is raised when invalid threshold method is passed."""
+    with pytest.raises(ValueError):
+        threshold(data, invalid_method)
