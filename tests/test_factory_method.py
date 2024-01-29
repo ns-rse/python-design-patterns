@@ -1,4 +1,5 @@
 """Testes for Factor Method."""
+
 import numpy as np
 import pytest
 

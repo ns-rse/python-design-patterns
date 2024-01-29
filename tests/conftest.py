@@ -1,4 +1,5 @@
 """Setup fixtures and config for the test."""
+
 import numpy as np
 import pytest
 
