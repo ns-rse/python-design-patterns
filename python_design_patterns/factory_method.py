@@ -1,4 +1,5 @@
 """Factory Method Example"""
+
 from typing import Callable
 import numpy as np
 
