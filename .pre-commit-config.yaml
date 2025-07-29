@@ -17,13 +17,13 @@ repos:
         types: [python, yaml, markdown]
 
   - repo: https://github.com/asottile/pyupgrade
-    rev: v3.19.0
+    rev: v3.20.0
     hooks:
       - id: pyupgrade
         args: [--py38-plus]
 
   - repo: https://github.com/psf/black
-    rev: 24.10.0
+    rev: 25.1.0
     hooks:
       - id: black
         types: [python]
@@ -37,7 +37,7 @@ repos:
   #     - id: nbstripout
 
   - repo: https://github.com/pycqa/flake8.git
-    rev: 7.1.1
+    rev: 7.3.0
     hooks:
       - id: flake8
         args: ["--extend-exclude=topostats/_version.py"]
@@ -45,7 +45,7 @@ repos:
         types: [python]
 
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.13.0
+    rev: v1.17.0
     hooks:
       - id: mypy
 
@@ -59,7 +59,7 @@ repos:
         files: \.py$
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: 'v0.8.2'
+    rev: 'v0.12.5'
     hooks:
       - id: ruff
 
