@@ -1,4 +1,4 @@
-[pytest](https://github.com/ns-rse/python-design-patterns/actions/workflows/tests.yml/badge.svg)](https://github.com/ns-rse/python-design-patterns/actions/workflows/tests.yml)
+[![](https://github.com/ns-rse/python-design-patterns/actions/workflows/tests.yml/badge.svg)](https://github.com/ns-rse/python-design-patterns/actions/workflows/tests.yml)
 
 # Python Design Patterns
 
@@ -6,7 +6,16 @@ A simple package consisting of example design-patterns to complement the blog [D
 
 # Usage
 
-Not yet published to PyPI and may never be, if you want to use this package then you can install with `pip` using...
+Not yet published to PyPI and may never be, if you want to use this package then you can install with `pip` it.
+
+```shell
+# Clone and install
+git clone git@github.com:ns-rse/python-design-patterns.git
+cd python-design-patterns
+pip install .
+# Pip install directly from GitHub
+pip install git+https://github.com/ns-rse/python-design-patterns.git
+```
 
 
 # Contributing
