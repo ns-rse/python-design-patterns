@@ -5,7 +5,6 @@ import pytest
 
 from python_design_patterns.factory_method import threshold
 
-
 rng = np.random.default_rng(seed=501472)
 pytest.random_array = rng.random((10, 10))
 
